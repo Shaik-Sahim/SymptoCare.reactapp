@@ -45,7 +45,6 @@ export default function Navbar({ view, setView, cartCount, toggleCart, toggleVau
     setMobileMenuOpen(false);
   };
 
-  const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
 
   return (

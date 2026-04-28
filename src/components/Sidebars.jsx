@@ -1,15 +1,5 @@
 // src/components/Sidebars.jsx (COMPLETE - with both CartSidebar and VaultSidebar)
-import { useState, useMemo, useCallback, useRef, useEffect } from 'react';
-
-// ─── PRODUCT CATALOG (for recommendations) ───────────────────────────────────
-const SUGGESTED_PRODUCTS = [
-  { id: 101, name: 'Vitamin C Serum 20%',    price: 799,  icon: '🧴', cat: 'skincare',  rating: 4.9 },
-  { id: 102, name: 'Omega-3 Fish Oil',        price: 599,  icon: '🌿', cat: 'wellness',  rating: 4.8 },
-  { id: 103, name: 'Paracetamol 650mg',       price: 65,   icon: '💊', cat: 'medicine',  rating: 4.8 },
-  { id: 104, name: 'Electric Toothbrush Pro', price: 2499, icon: '🦷', cat: 'dental',    rating: 4.8 },
-  { id: 105, name: 'SPF 50+ Sunscreen',       price: 499,  icon: '🧴', cat: 'skincare',  rating: 4.9 },
-  { id: 106, name: 'Ashwagandha Extract',     price: 349,  icon: '🌿', cat: 'wellness',  rating: 4.7 },
-];
+import { useState, useMemo, useCallback, useEffect } from 'react';
 
 // ─── COUPON CODES ─────────────────────────────────────────────────────────────
 const COUPONS = {

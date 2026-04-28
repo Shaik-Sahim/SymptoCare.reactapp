@@ -409,7 +409,7 @@ function VideoCall({ doctor, patientName, onEndCall }) {
       clearInterval(netInterval);
       if (localStream) localStream.getTracks().forEach(t => t.stop());
     };
-  }, []);
+  }, [localStream]);
 
   const toggleMute = () => {
     if (localStream) {
@@ -584,7 +584,7 @@ function PhoneCall({ doctor, patientName, patientPhone, onEndCall }) {
   const [showDialpad, setShowDialpad] = useState(false);
   const [dialpadInput, setDialpadInput] = useState('');
   const [showEndConfirm, setShowEndConfirm] = useState(false);
-  const [callQuality, setCallQuality] = useState('HD');
+  const [callQuality] = useState('HD');
   const durationIntervalRef = useRef(null);
 
   useEffect(() => {
@@ -756,7 +756,6 @@ function ChatInterface({ doctor, patientName, onEndChat }) {
   const [showAttachMenu, setShowAttachMenu] = useState(false);
   const [showEndConfirm, setShowEndConfirm] = useState(false);
   const [quickReplies] = useState(['I have a fever', 'I need a prescription', 'Follow-up question', 'Thank you doctor']);
-  const [attachedFiles, setAttachedFiles] = useState([]);
   const [reactionMsg, setReactionMsg] = useState(null);
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
@@ -962,6 +961,7 @@ function ChatInterface({ doctor, patientName, onEndChat }) {
 
 // ─── ENHANCED WALLET PANEL ────────────────────────────────────────────────────
 function WalletPanel({ addToast }) {
+  // eslint-disable-next-line no-unused-vars
   const [balance, setBalance] = useState(userWallet.balance);
   const [transactions, setTransactions] = useState(userWallet.transactions);
   const [showAddMoney, setShowAddMoney] = useState(false);

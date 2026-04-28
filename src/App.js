@@ -11,7 +11,7 @@ import Footer from './components/Footer.jsx';
 import ChatWidget from './components/ChatWidget.jsx';
 import { CartSidebar, VaultSidebar } from './components/Sidebars.jsx';
 import { ConsultModal, PaymentModal } from './components/Modals.jsx';
-import { Toast, Modal } from './components/UI.jsx';
+import { Toast } from './components/UI.jsx';
 
 // ── Views ────────────────────────────────────────────────────────────────────
 import HomeView from './views/HomeView.jsx';
@@ -78,9 +78,6 @@ export default function App() {
 
   // ── Consult modal ──────────────────────────────────────────────────────────
   const [consultModal, setConsultModal] = useState({ show: false, doc: null });
-  const openConsult = useCallback((doc) => {
-    setConsultModal({ show: true, doc });
-  }, []);
 
   // ── Payment modal ──────────────────────────────────────────────────────────
   const [payModal, setPayModal] = useState({ show: false, total: 0 });

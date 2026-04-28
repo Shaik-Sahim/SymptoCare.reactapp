@@ -1,5 +1,5 @@
 // src/views/LoginView.jsx
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 function seedDemoAccount() {
   try {
@@ -356,7 +356,7 @@ export default function LoginView({ onLogin, setView }) {
                           style={{ width: 18, height: 18, cursor: 'pointer' }}
                         />
                         <span style={{ fontSize: 13, color: '#4b5563' }}>
-                          I agree to the <a href="#" style={{ color: '#667eea', textDecoration: 'none' }}>Terms of Service</a>
+                          I agree to the <button style={{ background: 'none', border: 'none', color: '#667eea', cursor: 'pointer', padding: 0 }}>Terms of Service</button>
                         </span>
                       </label>
                       {errors.agreeTerms && <div style={{ color: '#ef4444', fontSize: 11, marginTop: 5 }}>{errors.agreeTerms}</div>}
@@ -366,7 +366,7 @@ export default function LoginView({ onLogin, setView }) {
 
                 {isLogin && (
                   <div style={{ textAlign: 'right', marginBottom: 24 }}>
-                    <a href="#" style={{ color: '#667eea', textDecoration: 'none', fontSize: 13 }}>Forgot Password?</a>
+                    <button style={{ background: 'none', border: 'none', color: '#667eea', cursor: 'pointer', fontSize: 13 }}>Forgot Password?</button>
                   </div>
                 )}
 

@@ -1,7 +1,7 @@
 // src/views/AIViews.jsx
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { Spinner } from "../components/UI.jsx";
-import { PRODUCTS, DENTAL_CONDITIONS, SKIN_CONDITIONS } from "../data/index.js";
+import { DENTAL_CONDITIONS, SKIN_CONDITIONS } from "../data/index.js";
 
 // Toast Component
 function Toast({ toasts, removeToast }) {
@@ -341,9 +341,6 @@ function ImageUpload({ onCapture }) {
 
 // Single Result Panel with Products
 function SingleResultPanel({ results, scanType, capturedImage, onReset, onDownload, addToCart, addToast }) {
-  const [selectedSpot, setSelectedSpot] = useState(null);
-  const [showCartMessage, setShowCartMessage] = useState(false);
-  
   const products = results.products || results.prods || [];
   const color = results.severity === 'Mild' ? '#10b981' : results.severity === 'Moderate' ? '#f59e0b' : '#ef4444';
   

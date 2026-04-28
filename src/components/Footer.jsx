@@ -28,9 +28,9 @@ export default function Footer({ setView }) {
             <h6 style={{ fontWeight: 700, marginBottom: 12 }}>Quick Links</h6>
             {QUICK_LINKS.map(([id, label]) => (
               <div key={id} style={{ marginBottom: 8 }}>
-                <a onClick={() => setView(id)} style={{ color: id === 'emergency' ? 'var(--danger)' : '#94a3b8', cursor: 'pointer', fontSize: '.9rem' }}>
+                <button onClick={() => setView(id)} style={{ background: 'none', border: 'none', color: id === 'emergency' ? 'var(--danger)' : '#94a3b8', cursor: 'pointer', fontSize: '.9rem', textAlign: 'left', padding: 0 }}>
                   <i className="bi bi-chevron-right me-2" style={{ color: 'var(--blue)', fontSize: '.75rem' }} />{label}
-                </a>
+                </button>
               </div>
             ))}
           </div>
@@ -84,7 +84,7 @@ export default function Footer({ setView }) {
           </p>
           <div>
             {['Privacy Policy','Terms','Cookies'].map(l => (
-              <a key={l} href="#" style={{ color: '#64748b', fontSize: '.83rem', marginLeft: 14 }}>{l}</a>
+              <button key={l} style={{ background: 'none', border: 'none', color: '#64748b', fontSize: '.83rem', marginLeft: 14, cursor: 'pointer' }}>{l}</button>
             ))}
           </div>
         </div>

@@ -1,5 +1,5 @@
 // src/components/Sidebar.jsx (CORRECTED - with auth handling)
-import { useState } from 'react';
+import React from 'react';
 
 const SIDEBAR_ITEMS = [
   { id: 'store', label: 'Medicine Store', icon: 'bi-shop', category: 'Medical Services', requiresAuth: true },

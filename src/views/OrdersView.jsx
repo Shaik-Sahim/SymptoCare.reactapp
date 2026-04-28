@@ -6,7 +6,6 @@ export default function OrdersView({ addToast }) {
   const [selectedOrder, setSelectedOrder] = useState(null);
   const [filter, setFilter] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-  const [showTracking, setShowTracking] = useState(false);
 
   useEffect(() => {
     loadOrders();
